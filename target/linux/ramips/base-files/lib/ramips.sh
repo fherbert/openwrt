@@ -436,6 +436,9 @@ ramips_board_detect() {
 			name="linkits7688"
 		fi
 		;;
+	*"Itron HAB01")
+		name="itronhab01"
+		;;
 	*)
 		name="generic"
 		;;
