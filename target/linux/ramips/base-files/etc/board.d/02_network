@@ -63,6 +63,13 @@ ramips_setup_interfaces()
 		ucidef_add_switch "switch0" "1" "0"
 		ucidef_set_interface_lan "eth0"
 		;;
+	itronhab01)
+		ucidef_add_switch "switch0" "1" "0"
+		ucidef_set_interface_lan "eth0"
+		_ucidef_set_interface "aplan" "eth0.1" 
+        local name=$1
+        local iface=$2
+		;;
 
 	3g-6200nl | \
 	mlw221 | \
@@ -382,12 +389,9 @@ ramips_setup_macs()
 		wan_mac="$(grep -m1 mac= "/dev/mtd${index}" | cut -d= -f2)"
 		lan_mac=$wan_mac
 		;;
+	itronhab01 | \
 	linkits7688 | \
 	linkits7688d)
-		wan_mac=$(mtd_get_mac_binary factory 4)
-		lan_mac=$(mtd_get_mac_binary factory 46)
-		;;
-	itronhab01)
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
 		;;
