@@ -92,6 +92,9 @@ get_status_led() {
 	linkits7688d)
 		[ "$1" = "upgrade" ] && status_led="mediatek:orange:wifi"
 		;;
+	itronhab01)
+		[ "$1" = "upgrade" ] && status_led="mediatek:orange:wifi"
+		;;
 	m2m)
 		status_led="m2m:blue:wifi"
 		;;
