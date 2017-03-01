@@ -6,7 +6,7 @@
 #
 
 define Profile/Itron8CC
-	NAME:=Itronc8CC
+	NAME:=Itron8CC
 	PACKAGES:=\
 		kmod-usb-core kmod-usb2 kmod-usb-ohci \
 		uboot-envtools kmod-ledtrig-netdev
