@@ -63,10 +63,7 @@ ramips_setup_interfaces()
 		ucidef_add_switch "switch0" "1" "0"
 		ucidef_set_interface_lan "eth0"
 		;;
-        local name=$1
-        local iface=$2
-		;;
-
+	
 	3g-6200nl | \
 	mlw221 | \
 	mr-102n)
