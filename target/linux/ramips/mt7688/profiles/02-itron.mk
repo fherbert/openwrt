@@ -5,14 +5,13 @@
 # See /LICENSE for more information.
 #
 
-define Profile/Itron8CC
-	NAME:=Itron8CC
+define Profile/itronhab01
+	NAME:=itronhab01
 	PACKAGES:=\
-		kmod-usb-core kmod-usb2 kmod-usb-ohci \
 		uboot-envtools kmod-ledtrig-netdev
 endef
 
-define Profile/Itron8CC/Description
+define Profile/itronhab01/Description
 	Default package set compatible with most boards.
 endef
-$(eval $(call Profile,Itron8CC))
+$(eval $(call Profile,itronhab01))
