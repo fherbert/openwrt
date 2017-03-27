@@ -49,10 +49,6 @@
 				ralink,group = "wdt";
 				ralink,function = "gpio";
 			};
-                        pwm1 {
-                                ralink,group = "pwm1";
-                                ralink,function = "gpio";
-                        };
 		};
 	};
 
@@ -107,12 +103,12 @@
 		i2c@900 {
 			status = "okay";
 
-      mcp23017@20 {
+		  gpio@20 {
         compatible = "microchip,mcp23017";
         gpio-controller;
         reg = <0x20>;
       };
-		};
+    };
 
 		uart1@d00 {
 			status = "okay";
