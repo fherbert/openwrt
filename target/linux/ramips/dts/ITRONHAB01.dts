@@ -7,12 +7,12 @@
 	model = "Itron HAB01";
 
 	chosen {
-		bootargs = "console=ttyS2,57600";
+		bootargs = "console=ttyS0,115200";
 	};
 
 	memory@0 {
 		device_type = "memory";
-		reg = <0x0 0x8000000>;
+		reg = <0x0 0x4000000>;
 	};
 
 	pinctrl {
@@ -62,9 +62,8 @@
 			m25p80@0 {
 				#address-cells = <1>;
 				#size-cells = <1>;
-				compatible = "mx25l25635e";
+				compatible = "jedec,spi-nor";
 				reg = <0 0>;
-				linux,modalias = "m25p80", "mx25l25635e";
 				spi-max-frequency = <40000000>;
 				m25p,chunked-io = <31>;
 
@@ -87,7 +86,7 @@
 
 				partition@50000 {
 					label = "firmware";
-					reg = <0x50000 0x1fb0000>;
+					reg = <0x50000 0xfb0000>;
 				};
 			};
 
